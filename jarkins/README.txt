@@ -73,9 +73,10 @@ NOT IN THIS ALPHA
 
 WHAT YOU NEED
 -------------
-  - Tekken 3 Expanded 1.5.0 or newer (the add-on hook is API 1), already set up
-    once - its own "Setup Tekken 3.cmd" run to the end, so .setup\ is there and
-    the game has started at least once.
+  - Tekken 3 Expanded 1.5.0 or newer (the add-on hook is API 1) - download it
+    from  https://github.com/omarma/tekken3-expanded/releases/latest  - already
+    set up once: its own "Setup Tekken 3.cmd" run to the end, so .setup\ is
+    there and the game has started at least once.
   - TMST is optional and untouched: install it before or after this, in its own
     addons\tmst folder. Nothing here changes TMST, and no mod in this alpha
     needs it.
