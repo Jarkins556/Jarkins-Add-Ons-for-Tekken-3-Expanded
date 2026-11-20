@@ -95,4 +95,4 @@ message(STATUS "Jarkins ${JARKINS_VERSION} (add-on hook ${TEKKEN3_ADDON_API}): $
 # The files this add-on ships, hashed together. The Expanded rebuilds when the digest
 # of this file changes, so this line is what makes a new copy of the add-on build:
 # without it, a fixed source file would leave the old compiled code in place.
-# jarkins-release-fingerprint: 8e87a65b21712c42d2210e6547b294f0f06de27915d9372f0cfaa6d45c3fe949
+# jarkins-release-fingerprint: cd38580d1426aae3012e775a57eb9d1c031f2a1499dbd9724c6a852e6a40f46f
