@@ -29,7 +29,7 @@ add-on owns — `mods\state.toml`, the package manifests — are declared frozen
 
 ---
 
-## 2. Versioning
+## 3. Versioning
 
 Two kinds of change, two kinds of bump:
 
@@ -47,7 +47,7 @@ not a smaller process: it runs the same seven steps below.
 
 ---
 
-## 3. One version, four places
+## 2. One version, four places
 
 They must agree, or the download name, the Mods page and the tag disagree with each other:
 
@@ -78,7 +78,7 @@ They must agree, or the download name, the Mods page and the tag disagree with e
 
 1. **Sync.** `<Expanded>\.setup\venv\Scripts\python.exe addons\jarkins\tools\sync_release.py`
    — writes `dist`, the zip and both mirrors (`Downloads\jarkins`, the Tekken3Hub folder).
-2. **Bump** per §2, in the four places of §3.
+2. **Bump** per §3, in the four places of §2.
 3. **Verify** — entries count, fingerprint, no stray sources, mirrors identical, repo copy
    identical:
    - `zipfile` count matches `len(FILES)`;
