@@ -54,12 +54,10 @@ WHAT IS IN IT (only what is finished)
                        and 3, yet read green and yellow - and a fighter the
                        game drew itself (the CPU, a guest, a challenge) has
                        no key, so it reads by the costume it shows: 1 red,
-                       3 blue, 5 orange. R1 is the sixth slot, the model only
-                       Xiaoyu has (P8): on everyone else it changes nothing,
-                       and the fighter keeps the model his key gave him.
-                       Names, models and portraits are left alone: Eddy's
-                       third costume is the game's own TIGER, the rest stay
-                       EDDY.
+                       3 blue, 5 orange. R1 is the sixth slot: on Xiaoyu it
+                       selects her secret Tag 1 green costume; every other
+                       fighter keeps the model his key gave him. Names, models
+                       and portraits are otherwise left alone.
   Jarkins Lab          Input Display (the last few inputs, in Practice) and
                        Damage Readouts (combo counter, damage, exact health).
 

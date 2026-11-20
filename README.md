@@ -6,7 +6,7 @@ It installs the way every Expanded add-on does — one folder in `addons\`, one 
 
 | Mod | What it does |
 | --- | --- |
-| **6 Costume Slots Mod** | One colour per key on the select screen: square red, cross blue, triangle green, circle yellow, Start orange, R1 purple. The plate follows the key that picked the fighter, not the costume he ends up in — triangle and circle put him in the game's costumes 1 and 3, yet read green and yellow — and a fighter the game drew itself (CPU, guest, challenge) reads by the costume it shows. **R1 is the sixth slot**, the model only Xiaoyu has (P8); on everyone else R1 changes nothing. Names, models and portraits are untouched: Eddy's third costume stays the game's own TIGER. |
+| **6 Costume Slots Mod** | One colour per key on the select screen: square red, cross blue, triangle green, circle yellow, Start orange, R1 purple. The plate follows the key that picked the fighter, not the costume he ends up in — triangle and circle put him in the game's costumes 1 and 3, yet read green and yellow — and a fighter the game drew itself (CPU, guest, challenge) reads by the costume it shows. **R1 is the sixth slot**: on Xiaoyu it selects her secret Tag 1 green costume; on everyone else it changes nothing. Names, models and portraits are otherwise left alone. |
 | **Jarkins Lab** | **Input Display** — the last few inputs, in Practice. **Damage Readouts** — combo counter, damage, exact health. |
 
 Everything else on the roadmap (dummy settings, combo trials, frame data, replays, the remaining toggle mods) is not in this alpha.
