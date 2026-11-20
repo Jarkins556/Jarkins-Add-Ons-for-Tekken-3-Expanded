@@ -29,6 +29,19 @@ add-on owns — `mods\state.toml`, the package manifests — are declared frozen
 
 ---
 
+## 2. One version, four places
+
+They must agree, or the download name, the Mods page and the tag disagree with each other:
+
+1. `addon.cmake` → `set(JARKINS_VERSION "x.y.z")` (what the game reports at build time),
+2. the dist folder `dist\Jarkins-Alpha-x.y.z\`,
+3. the zip `dist\Jarkins-Alpha-x.y.z.zip`,
+4. the git tag `vx.y.z` and the release title `Jarkins alpha x.y.z`.
+
+`sync_release.py` has the version in its paths too (`DIST`, `ZIP`); bump it there as well.
+
+---
+
 ## 3. Versioning
 
 Two kinds of change, two kinds of bump:
@@ -44,19 +57,6 @@ release is `0.3.0` (a new mod); only skin *content* refreshes after it are `0.3.
 
 Every one of those — minor or patch — gets its own tag and its own release. A patch is
 not a smaller process: it runs the same seven steps below.
-
----
-
-## 2. One version, four places
-
-They must agree, or the download name, the Mods page and the tag disagree with each other:
-
-1. `addon.cmake` → `set(JARKINS_VERSION "x.y.z")` (what the game reports at build time),
-2. the dist folder `dist\Jarkins-Alpha-x.y.z\`,
-3. the zip `dist\Jarkins-Alpha-x.y.z.zip`,
-4. the git tag `vx.y.z` and the release title `Jarkins alpha x.y.z`.
-
-`sync_release.py` has the version in its paths too (`DIST`, `ZIP`); bump it there as well.
 
 ---
 
