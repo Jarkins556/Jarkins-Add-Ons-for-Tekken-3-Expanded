@@ -1,0 +1,8 @@
+# The installer's own working folder: setup.log, state, anything it stages there.
+jarkins/workspace/
+
+# Python leftovers when the setup window is run from a checkout.
+__pycache__/
+*.pyc
+
+*.log

@@ -1,0 +1,22 @@
+format_version = 5
+id = "jarkins.plates"
+version = "0.1.0"
+name = "6 Costume Slots Mod"
+author = "Jarkins"
+description = "Colours each fighter's name plate by the key that picked him, one colour per key on the select screen: square red (#D60000), cross blue (#0000D1), triangle green (#018900), circle yellow (#DAA51E), Start orange (#DB6D00), R1 purple (#7024B7). It follows the binding, not the costume the game then shows: triangle and circle put the fighter in the game's costumes 1 and 3, yet their plates read green and yellow. A fighter the game drew itself (the CPU, a guest, a challenge) has no key, so it reads by the costume it shows: 1 red, 3 blue, 5 orange. R1 is the sixth slot, the model only Xiaoyu has (P8); on everyone else it changes nothing, the fighter keeps the model his key gave him. Each colour is authored on the game's own palette ramp, so the bevel, the white lettering and the strip below keep their shading. Names, models and portraits are left alone: Eddy's third costume is the game's own Tiger and stays TIGER, the rest stay EDDY."
+resolver = "declarative"
+save_compatibility = "shared"
+
+[[target]]
+game_id = "SLUS-00402"
+
+[[feature]]
+id = "plate-colours"
+name = "6 Costume Slots Mod"
+description = "Colours each fighter's name plate by the key that picked him, the same way for every character: square red, cross blue, triangle green, circle yellow, Start orange, R1 purple. The plate follows the binding, not the costume the game shows - triangle and circle put the fighter in the game's costumes 1 and 3 but read green and yellow - and a fighter the game drew itself (the CPU, a guest, a challenge) has no key, so it reads by the costume it shows: 1 red, 3 blue, 5 orange. R1 is the sixth slot: only Xiaoyu has the model it draws on, so on everyone else R1 keeps the model their key gave them. Letters stay white with the colour in their shadow, and the strip under the plate follows the bar. Names, models and portraits are untouched: Eddy's third costume stays the game's own TIGER, the rest stay EDDY. Restart after toggling."
+group = "Jarkins / Plates"
+default_enabled = true
+
+[[plugin]]
+feature = "plate-colours"
+id = "tekken3.plate-colours"

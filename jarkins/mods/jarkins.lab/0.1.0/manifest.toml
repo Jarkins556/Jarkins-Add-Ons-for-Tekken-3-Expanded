@@ -1,0 +1,202 @@
+format_version = 5
+id = "jarkins.lab"
+version = "0.1.0"
+name = "Jarkins Lab"
+author = "Jarkins"
+description = "Training tools that show you what you are actually pressing. Today that is the Input Display: the last few inputs, drawn along the bottom of the screen in Practice in the move list's own notation, so a dropped input or a late press is visible instead of guessed at. Nothing here changes how the game plays; switch a feature off and the fight is the game's own again. Restart after toggling."
+resolver = "declarative"
+save_compatibility = "shared"
+
+[[target]]
+game_id = "SLUS-00402"
+
+[[feature]]
+id = "input-display"
+name = "Input Display"
+description = "In Practice, draws the last few inputs along the bottom of the screen, in the notation the move list uses: a direction arrow, then the attack buttons held with it (square 1, triangle 2, cross 3, circle 4), in their own colours. One group per change, newest on the right, a single dot where nothing was held — so a dropped input shows as a missing icon and a late one arrives with the next. Nothing is drawn in any other mode. Restart after toggling."
+group = "Jarkins / Lab"
+default_enabled = false
+
+[[option]]
+feature = "input-display"
+id = "entries"
+label = "Inputs shown"
+description = "How many inputs the strip remembers. 4 to 16. The newest are kept when the strip would run off the screen."
+group = "Jarkins / Lab"
+type = "integer"
+min = 4
+max = 16
+step = 1
+default = 8
+
+[[option]]
+feature = "input-display"
+id = "player"
+label = "Pad to show"
+description = "Which player's pad the strip follows: 1 or 2."
+group = "Jarkins / Lab"
+type = "integer"
+min = 1
+max = 2
+step = 1
+default = 1
+
+[[option]]
+feature = "input-display"
+id = "corner"
+label = "Where it sits"
+description = "Where the strip sits: the bottom middle by default, or a corner if the game's own Practice panels get in the way."
+group = "Jarkins / Lab"
+type = "choice"
+default = "bottom-centre"
+choice = [
+    { value = "bottom-centre", label = "Bottom middle" },
+    { value = "bottom-left", label = "Bottom left" },
+    { value = "bottom-right", label = "Bottom right" },
+    { value = "top-left", label = "Top left" },
+    { value = "top-right", label = "Top right" },
+]
+
+[[plugin]]
+feature = "input-display"
+id = "jarkins.input"
+
+[[feature]]
+id = "damage-readouts"
+name = "Damage Readouts"
+description = "In a real match: the combo counter the game pops up when a string lands, repeated in its own style - orange text, three lines: the hit count and the word (\"8 COMBO\"), the combo's damage under it (\"60 DAMAGE\"), then the newest hits so a juggle's scaling is visible as it happens. Each fighter's block sits on his own side of the screen, mirrored like the health bars, and counts only his own hits. It pops up on the hit that makes a combo, clears when that string ends, and goes away the moment the round is decided - a K.O. or the clock running out - and comes back with the next round. Under each health bar, the exact health left as a number, which the Health alignment setting can put at the outer end, the middle or the inner end of the bar. The Number style setting picks where the colour sits on each glyph: on the rim with a white inside, on the whole glyph, or inside with a white rim. Damage is measured from life falling, so it counts what landed rather than what was meant to, for every character and every mode with a fight. Practice is left alone - it has no health bars, and its own popup already covers it. Nothing is drawn in a menu or on the pause screen. Restart after toggling."
+group = "Jarkins / Lab"
+default_enabled = false
+
+[[option]]
+feature = "damage-readouts"
+id = "show_combo"
+label = "Combo counter"
+description = "Draws each fighter's combo counter on his own side of the screen: the hit count, the combo's damage, and the newest hits under them. Turn off to keep only the health numbers."
+group = "Jarkins / Lab"
+type = "boolean"
+default = "true"
+
+[[option]]
+feature = "damage-readouts"
+id = "show_health"
+label = "Health numbers"
+description = "Draws the exact health left as a number under each health bar, placed by the Health alignment setting. Turn off to keep only the combo counters."
+group = "Jarkins / Lab"
+type = "boolean"
+default = "true"
+
+[[option]]
+feature = "damage-readouts"
+id = "health_pos"
+label = "Health alignment"
+description = "Which of the three places along the bar the health number takes: Outer end (the bar's end away from the middle of the screen), Middle, or Inner end (the end toward the round timer). Player two's bar is mirrored, so the setting mirrors with it: both fighters get the same end of their own bar."
+group = "Jarkins / Lab"
+type = "choice"
+default = "middle"
+choice = [
+    { value = "left", label = "Outer end" },
+    { value = "middle", label = "Middle" },
+    { value = "right", label = "Inner end" },
+]
+
+[[option]]
+feature = "damage-readouts"
+id = "combo_color"
+label = "Combo counter colour"
+description = "The colour of every line of the combo blocks: the hit count, the combo's damage and the newest hits. The dark edge behind it stays."
+group = "Jarkins / Lab"
+type = "choice"
+default = "orange"
+choice = [
+    { value = "red", label = "Red" },
+    { value = "orange", label = "Orange (default)" },
+    { value = "yellow", label = "Yellow" },
+    { value = "green", label = "Green" },
+    { value = "blue", label = "Blue" },
+    { value = "purple", label = "Purple" },
+    { value = "pink", label = "Pink" },
+    { value = "brown", label = "Brown" },
+    { value = "black", label = "Black" },
+    { value = "white", label = "White" },
+]
+[[option]]
+feature = "damage-readouts"
+id = "health_p1_color"
+label = "Left health number colour"
+description = "The colour of the health number on player one's bar. The dark edge behind it stays."
+group = "Jarkins / Lab"
+type = "choice"
+default = "blue"
+choice = [
+    { value = "red", label = "Red" },
+    { value = "orange", label = "Orange" },
+    { value = "yellow", label = "Yellow" },
+    { value = "green", label = "Green" },
+    { value = "blue", label = "Blue (default)" },
+    { value = "purple", label = "Purple" },
+    { value = "pink", label = "Pink" },
+    { value = "brown", label = "Brown" },
+    { value = "black", label = "Black" },
+    { value = "white", label = "White" },
+]
+[[option]]
+feature = "damage-readouts"
+id = "health_p2_color"
+label = "Right health number colour"
+description = "The colour of the health number on player two's bar. The dark edge behind it stays."
+group = "Jarkins / Lab"
+type = "choice"
+default = "red"
+choice = [
+    { value = "red", label = "Red (default)" },
+    { value = "orange", label = "Orange" },
+    { value = "yellow", label = "Yellow" },
+    { value = "green", label = "Green" },
+    { value = "blue", label = "Blue" },
+    { value = "purple", label = "Purple" },
+    { value = "pink", label = "Pink" },
+    { value = "brown", label = "Brown" },
+    { value = "black", label = "Black" },
+    { value = "white", label = "White" },
+]
+[[option]]
+feature = "damage-readouts"
+id = "glyph_fill"
+label = "Number style"
+description = "Where the colour goes on the numbers and letters. Outer: the colour is the rim of each glyph and the inside stays white, the way the name plates are set. Whole: the whole glyph is the colour. Inner: the inside is the colour and the rim stays white. It applies to the combo block and to the health numbers alike; under a white colour the inside goes black, so the glyph keeps an edge."
+group = "Jarkins / Lab"
+type = "choice"
+default = "outer"
+choice = [
+    { value = "outer", label = "Outer - colour rim, white inside" },
+    { value = "whole", label = "Whole - all colour" },
+    { value = "inner", label = "Inner - colour inside, white rim" },
+]
+[[option]]
+feature = "damage-readouts"
+id = "recent"
+label = "Hits listed"
+description = "How many of the combo's newest hits are listed under the count. 1 to 8."
+group = "Jarkins / Lab"
+type = "integer"
+min = 1
+max = 8
+step = 1
+default = 3
+
+[[option]]
+feature = "damage-readouts"
+id = "combo_min"
+label = "Hits before it counts as a combo"
+description = "How many hits a string needs before it is shown as a combo count rather than a single hit's damage. 2 is what tells a poke apart from a combo; 1 counts every hit."
+group = "Jarkins / Lab"
+type = "integer"
+min = 1
+max = 10
+step = 1
+default = 2
+
+[[plugin]]
+feature = "damage-readouts"
+id = "jarkins.damage"
