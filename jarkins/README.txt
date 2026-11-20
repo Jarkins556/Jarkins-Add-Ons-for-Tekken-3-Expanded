@@ -79,7 +79,9 @@ WHAT YOU NEED
     there and the game has started at least once.
   - TMST is optional and untouched: install it before or after this, in its own
     addons\tmst folder. Nothing here changes TMST, and no mod in this alpha
-    needs it.
+    needs it. The add-on works alongside TMST's add-ons without requiring them:
+    TMST, both or neither, in their own folders side by side. Anything that ever
+    does need one will say so here, on that mod, when it is added.
   - One line in game.toml, which "Setup Jarkins.cmd" adds for you the first
     time:  mod_function_entry_funcs = ["0x8003D6B0"]  under  [recompiler] .
     0x8003D6B0 is the game's HUD routine; the damage readouts and the plate

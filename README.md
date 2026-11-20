@@ -14,7 +14,7 @@ Everything else on the roadmap (dummy settings, combo trials, frame data, replay
 ## Requirements
 
 - **Tekken 3 Expanded 1.5.0 or newer** (add-on hook API 1) — [download the latest release](https://github.com/omarma/tekken3-expanded/releases/latest) — set up once already: its own `Setup Tekken 3.cmd` run to the end, so `.setup\` exists and the game has started at least once.
-- TMST is optional and left alone. No mod here needs it.
+- **Works alongside TMST's add-ons without requiring them.** Install TMST, both, or neither: nothing in this pack needs it, and neither folder touches the other. A mod that ever does need one will say so here, on that mod, once it is added.
 - **No game data is included** — no disc image, no BIOS, no artwork. You bring your own Tekken 3 disc through the Expanded.
 
 ## Install
